@@ -1,4 +1,5 @@
-
+!pip install pypdf
+!pip install faiss-gpu
 
 import os
 import warnings
@@ -22,6 +23,10 @@ os.environ["COHERE_API_KEY"] = COHERE_API_KEY
 
 
 print(f"✅ PDF ready → {PDF_PATH}")
+
+from google.colab import files
+
+uploaded = files.upload()
 
 loader = PyPDFLoader(PDF_PATH)
 pages = loader.load()
