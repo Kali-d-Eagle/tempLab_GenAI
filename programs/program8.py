@@ -1,3 +1,5 @@
+!pip install langchain_community
+!pip install langchain_cohere
 import os
 from langchain_community.document_loaders import TextLoader
 from langchain_cohere import ChatCohere
@@ -5,8 +7,13 @@ from langchain_cohere import ChatCohere
 
 os.environ["COHERE_API_KEY"] = "cohere_1EG5EOMS8Xwpa7ebiXXK252ThO14BnmYfxcDsQvT1rUxV5"
 
+from google.colab import files
 
-loader = TextLoader("teaching.txt")
+uploaded = files.upload()
+
+# upload ur chess.txt file
+
+loader = TextLoader("chess.txt")
 docs = loader.load()
 text = docs[0].page_content
 
