@@ -39,4 +39,4 @@ plt.show()
 
 
 print("Words most similar to 'treatment':")
-print(model.wv.most_similar("treatment", topn=3))
+print(model.wv.most_similar("treatment", topn=7))
