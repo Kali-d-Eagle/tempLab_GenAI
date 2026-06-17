@@ -1,0 +1,113 @@
+body {
+  background-color: #f9fafb;
+  color: #111827;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.button-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+button {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  background-color: #111827;
+  color: #ffffff;
+  border: 1px solid #111827;
+  transition: background-color 0.1s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #374151;
+  border-color: #374151;
+}
+
+button svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+/* Toast Notification (Simple style) */
+.toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1010;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.toast {
+  background-color: #111827;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: toastFadeIn 0.2s ease forwards;
+}
+
+.toast svg {
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+@keyframes toastFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toastFadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px;
+  }
+  .toast-container {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+  .toast {
+    width: 100%;
+    justify-content: center;
+  }
+}
