@@ -65,6 +65,16 @@ async function copyToClipboard(text) {
   }
 }
 
+function downloadFile(path, filename) {
+    const link = document.createElement('a');
+    link.href = path;
+    link.download = filename;
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
 // Action: Fetch from programs/program{id}.py, copy to clipboard, and trigger download
 async function handleAction(id) {
   const actualPath = `programs/program${id}.py`;
@@ -100,31 +110,22 @@ async function handleAction(id) {
     link.href = actualPath;
 
 
-function downloadFile(path, filename) {
-    const link = document.createElement('a');
-    link.href = path;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-}
 
 
-// Additional downloads
-if (id === 8) {
-  downloadFile('programs/chess.txt', 'chess.txt');
-  showToast("chess.txt downloaded!");
-}
 
-if (id === 10) {
-  downloadFile('programs/IPC.pdf', 'IPC.pdf');
-  showToast("IPC.pdf downloaded!");
-}
     link.download = `program${id}.py`;
     link.style.display = 'none';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+
+    if (id === 8) {
+    downloadFile('programs/chess.txt', 'chess.txt');
+}
+
+if (id === 10) {
+    downloadFile('programs/IPC.pdf', 'IPC.pdf');
+}
 
     showToast(`Program ${id} downloaded!`);
   }
