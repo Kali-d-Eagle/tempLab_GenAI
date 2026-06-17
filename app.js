@@ -119,12 +119,22 @@ async function handleAction(id) {
     link.click();
     document.body.removeChild(link);
 
-    if (id === 8) {
+ link.click();
+document.body.removeChild(link);
+
+// Extra downloads
+if (id === 8) {
     downloadFile('programs/chess.txt', 'chess.txt');
 }
 
 if (id === 10) {
     downloadFile('programs/IPC.pdf', 'IPC.pdf');
+}
+
+if (copied) {
+    showToast(`Program ${id} copied & downloaded!`);
+} else {
+    showToast(`Program ${id} downloaded!`);
 }
 
     showToast(`Program ${id} downloaded!`);
