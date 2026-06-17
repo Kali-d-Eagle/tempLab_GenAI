@@ -1,27 +1,30 @@
-# pip install sentence-transformers langchain-cohere cohere
+
 import os
 from sentence_transformers import SentenceTransformer
 from langchain_cohere import ChatCohere
 
-# Set Cohere API key
-os.environ["COHERE_API_KEY"] = "YOUR_API_KEY"
 
-# Load SentenceTransformer embedding model
+os.environ["COHERE_API_KEY"] = "cohere_1EG5EOMS8Xwpa7ebiXXK252ThO14BnmYfxcDsQvT1rUxV5"
+
+
 embed_model = SentenceTransformer("all-MiniLM-L6-v2")
 
-# Initialize Cohere Chat Model
+
 llm = ChatCohere(
     model="command-a-03-2025",
     temperature=0.3
 )
 
-# User input and text generation
-prompt = input("Enter prompt: ")
-embedding = embed_model.encode(prompt)
-response = llm.invoke(prompt)
+while True:
 
-print("\nEmbedding Vector (first 10 values):")
-print(embedding[:10])
+    prompt = input("Enter prompt: ")
+    if prompt == "exit":
+        break
+    embedding = embed_model.encode(prompt)
+    response = llm.invoke(prompt)
 
-print("\nLLM Response:")
-print(response.content)
+    print("\nEmbedding Vector (first 10 values):")
+    print(embedding[:10])
+
+    print("\nLLM Response:")
+    print(response.content)
