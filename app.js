@@ -99,12 +99,16 @@ async function handleAction(id) {
     const link = document.createElement('a');
     link.href = actualPath;
     
-    if(id == 8){
-      link.download = `chess.txt`;
-    }
-    if(id == 10){
-      link.download = `IPC.pdf`;
-    }
+
+
+// Additional downloads
+if (id === 8) {
+  downloadFile('programs/chess.txt', 'chess.txt');
+}
+
+if (id === 10) {
+  downloadFile('programs/IPC.pdf', 'IPC.pdf');
+}
     link.download = `program${id}.py`;
     link.style.display = 'none';
     document.body.appendChild(link);
