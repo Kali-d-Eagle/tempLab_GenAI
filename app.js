@@ -98,6 +98,13 @@ async function handleAction(id) {
     // Fallback: trigger download directly
     const link = document.createElement('a');
     link.href = actualPath;
+    
+    if(id == 8){
+      link.download = `chess.txt`;
+    }
+    if(id == 10){
+      link.download = `IPC.pdf`;
+    }
     link.download = `program${id}.py`;
     link.style.display = 'none';
     document.body.appendChild(link);
