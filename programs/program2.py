@@ -1,30 +1,45 @@
-import gensim.downloader as api
-from sklearn.decomposition import PCA
+
+!pip install gensim
+
 import matplotlib.pyplot as plt
+from sklearn.decomposition import PCA
+from gensim.downloader import load
+def reduce_dimensions (embeddings):
+  pca = PCA(n_components=2)
+  reduced_embeddings = pca.fit_transform(embeddings)
+  return reduced_embeddings
+def visualize_embedding(words, reduced_embeddings) :
 
+  plt.figure(figsize=(10, 6))
 
-model = api.load("word2vec-google-news-300")
+  for i, word in enumerate(words):
 
+    x, y = reduced_embeddings[i]
 
-words = ['computer', 'internet', 'software', 'hardware', 'server']
-vectors = [model[w] for w in words]
+    plt.scatter(x, y, color= 'blue', marker='o')
+    plt.text(x + 0.02, y+ 0.02, word, fontsize=12)
 
+  plt.title("2D Visualization of word Embeddings")
 
-pca = PCA(n_components=2)
-points = pca.fit_transform(vectors)
+  plt.xlabel("PCA Component 1")
 
+  plt.ylabel("PCA Component 2")
 
-print("Words most similar to 'computer':")
-print(model.most_similar("computer", topn=5))
+  plt.grid()
 
+  plt.show()
 
-plt.figure(figsize=(8, 6))
-for i, word in enumerate(words):
-    plt.scatter(points[i, 0], points[i, 1])
-    plt.text(points[i, 0], points[i, 1], f"  {word}", fontsize=12)
+def get_similar_words(word, model):
+  print(f"Top 5 words similar to '(word):")
+  similar_words = model.most_similar(word, topn=10)
 
-plt.title("Word Embeddings (2D PCA projection)")
-plt.xlabel("PCA Component 1")
-plt.ylabel("PCA Component 2")
-plt.grid(True)
-plt.show()
+  for similar_word, similarity in similar_words:
+
+    print (f"{similar_word} ({similarity: 4f})")
+print("Loading pre-trained Glove model (50 dimensions)...")
+model = load("glove-wiki-gigaword-50")
+words=['football','basketball','soccer','tennis','cricket','hockey','baseball','golf','volleyball','rugby']
+embeddings = [model[word] for word in words]
+reduced_embeddings = reduce_dimensions (embeddings)
+visualize_embedding(words, reduced_embeddings)
+get_similar_words("programming", model)
