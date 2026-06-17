@@ -1,3 +1,4 @@
+!pip install gensim
 import gensim.downloader as api
 import random
 
