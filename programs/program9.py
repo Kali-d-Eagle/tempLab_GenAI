@@ -1,7 +1,8 @@
+!pip install Wikipedia-API
 from pydantic import BaseModel
 import wikipediaapi
 
-# Define Pydantic Schema
+
 class Institution(BaseModel):
     name: str
     summary: str
