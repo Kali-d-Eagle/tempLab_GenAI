@@ -1,0 +1,283 @@
+CHESS KNOWLEDGE BASE
+
+Introduction
+
+Chess is a strategic board game played between two players on an 8×8 board consisting of 64 squares. One player controls the white pieces and the other controls the black pieces. The objective is to checkmate the opponent's king, meaning the king is under attack and has no legal move to escape.
+
+Board Coordinates
+
+The chessboard consists of files (a-h) and ranks (1-8).
+
+a1 is the bottom-left corner from White's perspective.
+h8 is the top-right corner from White's perspective.
+
+Pieces and Values
+
+Pawn = 1 point
+Knight = 3 points
+Bishop = 3 points
+Rook = 5 points
+Queen = 9 points
+King = Infinite value
+
+Piece Movement
+
+Pawn:
+
+* Moves one square forward.
+* May move two squares from its starting position.
+* Captures diagonally.
+* Can promote upon reaching the final rank.
+
+Knight:
+
+* Moves in an L-shape.
+* Can jump over pieces.
+
+Bishop:
+
+* Moves diagonally any number of squares.
+
+Rook:
+
+* Moves horizontally or vertically any number of squares.
+
+Queen:
+
+* Combines rook and bishop movement.
+
+King:
+
+* Moves one square in any direction.
+
+Special Rules
+
+Castling:
+
+* Kingside: O-O
+* Queenside: O-O-O
+* King and rook must not have moved.
+* Squares between them must be empty.
+* King cannot castle through check.
+
+En Passant:
+
+* A special pawn capture available immediately after an opposing pawn advances two squares.
+
+Promotion:
+
+* A pawn reaching the final rank can become a Queen, Rook, Bishop, or Knight.
+
+Check and Checkmate
+
+Check:
+The king is under attack.
+
+Checkmate:
+The king is in check and has no legal move.
+
+Stalemate:
+The side to move has no legal move but is not in check.
+
+Draw Conditions
+
+1. Stalemate
+2. Threefold repetition
+3. Fifty-move rule
+4. Insufficient material
+5. Mutual agreement
+
+Chess Notation
+
+e4 = pawn to e4
+Nf3 = knight to f3
+Bb5 = bishop to b5
+Qxd5 = queen captures on d5
+O-O = kingside castling
+O-O-O = queenside castling
+e8=Q = pawn promotes to queen
+
+Opening Principles
+
+1. Control the center.
+2. Develop pieces quickly.
+3. Castle early.
+4. Avoid moving the same piece repeatedly.
+5. Connect the rooks.
+6. Maintain king safety.
+
+Important Openings
+
+Ruy Lopez:
+1.e4 e5 2.Nf3 Nc6 3.Bb5
+
+Italian Game:
+1.e4 e5 2.Nf3 Nc6 3.Bc4
+
+Sicilian Defense:
+1.e4 c5
+
+French Defense:
+1.e4 e6
+
+Caro-Kann Defense:
+1.e4 c6
+
+Queen's Gambit:
+1.d4 d5 2.c4
+
+King's Indian Defense:
+1.d4 Nf6 2.c4 g6
+
+English Opening:
+1.c4
+
+Strategic Concepts
+
+Center Control:
+Controlling central squares gives pieces greater mobility.
+
+Space Advantage:
+Having more territory available for piece movement.
+
+Initiative:
+Forcing the opponent to react to threats.
+
+Piece Activity:
+Active pieces are generally stronger than passive ones.
+
+Pawn Structure:
+The arrangement of pawns significantly affects strategy.
+
+Weak Squares:
+Squares that cannot be defended by pawns.
+
+Outpost:
+A protected square deep in enemy territory.
+
+Open Files:
+Files without pawns, ideal for rooks.
+
+Tactical Motifs
+
+Fork:
+One piece attacks two or more targets simultaneously.
+
+Pin:
+A piece cannot move without exposing a more valuable piece.
+
+Skewer:
+A valuable piece is attacked and forced away, exposing another piece.
+
+Discovered Attack:
+Moving one piece reveals an attack by another.
+
+Double Check:
+Two pieces check the king simultaneously.
+
+Deflection:
+Forcing a defender away.
+
+Decoy:
+Luring a piece to an unfavorable square.
+
+Zwischenzug:
+An intermediate move inserted before an expected move.
+
+Back Rank Mate:
+Checkmate delivered on the back rank.
+
+Smothered Mate:
+A knight checkmates a king trapped by its own pieces.
+
+Endgame Principles
+
+King activity becomes crucial.
+
+Opposition:
+Kings face each other with one square in between.
+
+Triangulation:
+A maneuver used to lose a move.
+
+Lucena Position:
+A fundamental winning rook endgame.
+
+Philidor Position:
+A fundamental drawing rook endgame.
+
+Passed Pawn:
+A pawn with no opposing pawns blocking its advance.
+
+Outside Passed Pawn:
+A passed pawn far from the main action.
+
+Chess Engines
+
+Stockfish:
+One of the strongest open-source chess engines.
+
+Leela Chess Zero:
+Neural-network-based engine inspired by AlphaZero.
+
+AlphaZero:
+Developed by DeepMind using reinforcement learning.
+
+Engine Evaluation
+
++1.00 = White is better by approximately one pawn.
+-1.00 = Black is better by approximately one pawn.
++M3 = Forced mate in 3 for White.
+-M2 = Forced mate in 2 for Black.
+
+Chess Ratings
+
+Beginner: Below 1000
+Intermediate: 1000-1600
+Advanced: 1600-2200
+Expert: 2200+
+Master: 2200+
+Grandmaster: 2500+
+
+FIDE Titles
+
+Candidate Master (CM)
+FIDE Master (FM)
+International Master (IM)
+Grandmaster (GM)
+
+Famous Players
+
+Wilhelm Steinitz:
+First official World Champion.
+
+José Raúl Capablanca:
+Known for exceptional endgame skill.
+
+Bobby Fischer:
+11th World Champion.
+
+Garry Kasparov:
+Former World Champion and dominant player of the 1980s and 1990s.
+
+Viswanathan Anand:
+India's first World Chess Champion.
+
+Magnus Carlsen:
+Former World Champion and one of the strongest players in history.
+
+Modern Chess Training
+
+1. Solve tactical puzzles daily.
+2. Analyze your games.
+3. Study endgames.
+4. Learn opening ideas rather than memorizing moves.
+5. Review master games.
+6. Practice calculation and visualization.
+7. Use engines for post-game analysis.
+8. Develop pattern recognition.
+
+Golden Rule
+
+Tactics flow from a superior position, but strategic understanding creates superior positions.
+
