@@ -3,6 +3,7 @@ from transformers import pipeline
 
 sentiment = pipeline('sentiment-analysis')
 
+# add more sentences...(+ve | -ve)
 texts = [
     "This phone is amazing!",
     "Worst product ever."
