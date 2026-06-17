@@ -1,3 +1,4 @@
+!pip install gensim
 import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
 from gensim.models import Word2Vec
