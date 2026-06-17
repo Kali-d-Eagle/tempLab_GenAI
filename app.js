@@ -98,16 +98,27 @@ async function handleAction(id) {
     // Fallback: trigger download directly
     const link = document.createElement('a');
     link.href = actualPath;
-    
+
+
+function downloadFile(path, filename) {
+    const link = document.createElement('a');
+    link.href = path;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
 
 
 // Additional downloads
 if (id === 8) {
   downloadFile('programs/chess.txt', 'chess.txt');
+  showToast("chess.txt downloaded!");
 }
 
 if (id === 10) {
   downloadFile('programs/IPC.pdf', 'IPC.pdf');
+  showToast("IPC.pdf downloaded!");
 }
     link.download = `program${id}.py`;
     link.style.display = 'none';
