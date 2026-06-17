@@ -1,4 +1,5 @@
-
+!pip install langchain-cohere
+!pip install sentence-transformers
 import os
 from sentence_transformers import SentenceTransformer
 from langchain_cohere import ChatCohere
