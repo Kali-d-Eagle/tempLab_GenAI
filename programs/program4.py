@@ -15,16 +15,14 @@ llm = ChatCohere(
     temperature=0.3
 )
 
-while True:
 
-    prompt = input("Enter prompt: ")
-    if prompt == "exit":
-        break
-    embedding = embed_model.encode(prompt)
-    response = llm.invoke(prompt)
 
-    print("\nEmbedding Vector (first 10 values):")
-    print(embedding[:10])
+prompt = input("Enter prompt: ")
+embedding = embed_model.encode(prompt)
+response = llm.invoke(prompt)
 
-    print("\nLLM Response:")
-    print(response.content)
+print("\nEmbedding Vector (first 10 values):")
+print(embedding[:10])
+
+print("\nLLM Response:")
+print(response.content)
